@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('message', function () {
+    $app = PHPRedis::connection();
+$app->set("masterpowers", "Yeah Baby Yeah");
+print_r($app->get("masterpowers"));
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

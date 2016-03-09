@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ea1fee525914154e6d6bbf071697b5a1",
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "hash": "1c70c9378bccba1ca6dcf25089bf9ae8",
+    "content-hash": "8854460cb9c442d604d4784204269985",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1725,6 +1725,49 @@
                 "dump"
             ],
             "time": "2016-02-13 09:23:44"
+        },
+        {
+            "name": "vetruvet/laravel-phpredis",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vetruvet/laravel-phpredis.git",
+                "reference": "1dc73e054c375f7a9329152ee4777aab6bfa6a2b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vetruvet/laravel-phpredis/zipball/1dc73e054c375f7a9329152ee4777aab6bfa6a2b",
+                "reference": "1dc73e054c375f7a9329152ee4777aab6bfa6a2b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-redis": "*",
+                "illuminate/redis": "5.* || 4.*",
+                "illuminate/support": "5.* || 4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Vetruvet\\PhpRedis": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "authors": [
+                {
+                    "name": "Valera Trubachev",
+                    "email": "vetruvet@gmail.com"
+                }
+            ],
+            "description": "Use phpredis as the redis connection in Laravel",
+            "keywords": [
+                "laravel",
+                "phpredis",
+                "redis"
+            ],
+            "time": "2016-01-25 16:24:59"
         },
         {
             "name": "vlucas/phpdotenv",
