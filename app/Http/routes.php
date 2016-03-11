@@ -1,18 +1,7 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Routes File
-|--------------------------------------------------------------------------
-|
-| Here is where you will register all of the routes in an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('admin::activate');
 });
 
 Route::get('message', function () {
@@ -21,17 +10,28 @@ $app->set("masterpowers", "Yeah Baby Yeah");
 print_r($app->get("masterpowers"));
 });
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
-
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::group(['prefix' => 'admin/{account_id}', 'namespace' => 'Admin', 'as' => 'admin/{account_id}'], function () {
+        Route::get('activate', function ($accountId) {
+            return $accountId;
+        })->name('activate');
+    });
 });
+
+//Route::get('/profile', 'X@showProfile')->name('profile');
+// In View You Can do This // return redirect()->route('profile');
+/* List Of Available Route Method
+Route::get($uri, $callback);
+Route::post($uri, $callback);
+Route::put($uri, $callback);
+Route::patch($uri, $callback);
+Route::delete($uri, $callback);
+Route::options($uri, $callback);
+Route::match($uri, $callback);
+Route::any($uri, $callback);
+$route = Route::current();
+
+$name = $route->getName();
+
+$actionName = $route->getActionName();
+*/

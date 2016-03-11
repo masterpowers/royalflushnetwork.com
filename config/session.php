@@ -44,7 +44,7 @@ return [
     |
     */
 
-    'encrypt' => false,
+    'encrypt' => env('ENCRYPT_SESSION', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -70,7 +70,7 @@ return [
     |
     */
 
-    'connection' => null,
+    'connection' => env('SESSION_CONNECTION', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ return [
     |
     */
 
-    'cookie' => 'laravel_session',
+    'cookie' => env('COOKIE_NAME', 'laravel_session'),
 
     /*
     |--------------------------------------------------------------------------
@@ -135,7 +135,7 @@ return [
     |
     */
 
-    'domain' => null,
+    'domain' => env('COOKIE_DOMAIN', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -148,6 +148,5 @@ return [
     |
     */
 
-    'secure' => false,
-
+    'secure' => env('SECURE_COOKIE', 'false'),
 ];

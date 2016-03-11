@@ -1,4 +1,4 @@
-# Laravel PHP Framework
+# Royal Flush Network - Built With Fastest Server Implementation Built For Performance!
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
@@ -6,22 +6,68 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+[Royal Flush Network](http://royalflushnetwork.com)
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+**To Do**
+- [ ] Products(name,photo,model) and categories (many to many & nested)
+- [ ] Admin CRUD Categories , Products, Show Products and Filter by Category
+- [ ] Customer can Signup , Show Products, filter by category
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+**Set Up **
+- [x] Compile PHPRedis
 
-## Contributing
+**ENV SET UP **
+- [x] Forge Server Set UP HHVM + Nginx + MariaDB + Socket.io + PHPRedis
+- [x] PHP Redis for PHP7 As Broadcast Driver and Queue Driver
+- [x] Memcached As Cached Driver
+- [x] Database As Session Driver
+- [x] Options To Use BrainTree or Stripe For Subscription
+- [x] Facebook Apps Ready
+- [x] Google Recaptcha Ready
+- [x] Laravel ACL (Must Used Memcached as Cached Driver)
+- [x] Russian Doll Caching Ready (Must used Memcached as Cached Driver)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+** Optional **
+- [ ] Uncomment AppServiceProvider Bouncer and Subscription(Braintree/Stripe)
+- [ ] Option.Json Install the Array to Composer.json for (BrainTree/Stripe)
 
-## Security Vulnerabilities
+** Configureable **
+- [ ] config/avatar.php [Laravolt/Avatar](https://github.com/laravolt/avatar) fonts located in resources/laravolt/avatar/fonts
+- [ ] AdminTableSeeder For Adding Roles and Permission [Silber/Bouncer](https://github.com/JosephSilber/bouncer)
+- [ ] Facebook Apps Config /config/laravel-facebook-sdk.php [SammyK/LaravelFacebookSdk](https://github.com/SammyK/LaravelFacebookSdk)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+** Facade Usable **
+- [x] Bouncer 
+- [x] Uuid 
+- [x] Facebook
+- [x] Avatar
+- [x] PHPRedis 
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## Initial Set Up For Productions
+
+1.) Create FB Developers App
+2.) Create Google Recaptcha 
+3.) Create BrainTree / Stripe 
+4.) Create Cloudflare
+5.) Create Forge
+6.) Apply SSL
+
+## Gulp Command Available ##
+- [x] gulp
+- [x] gulp watch
+- [x] gulp compress (html-minifier)
+
+## Artisan Optimization To be Added Upon Deployed##
+```
+php artisan clear-compiled
+php artisan config:clear
+php artisan cache:clear
+php artisan view:clear
+php artisan config:cache
+php artisan route:cache
+php artisan optimize
+composer dumpautoload -o
+php artisan queue:restart
+```
