@@ -33,9 +33,9 @@
 - [ ] Option.Json Install the Array to Composer.json for (BrainTree/Stripe)
 
 ** Configureable **
-- [ ] config/avatar.php [Laravolt/Avatar](https://github.com/laravolt/avatar) fonts located in resources/laravolt/avatar/fonts
-- [ ] AdminTableSeeder For Adding Roles and Permission [Silber/Bouncer](https://github.com/JosephSilber/bouncer)
-- [ ] Facebook Apps Config /config/laravel-facebook-sdk.php [SammyK/LaravelFacebookSdk](https://github.com/SammyK/LaravelFacebookSdk)
+- [x] config/avatar.php [Laravolt/Avatar](https://github.com/laravolt/avatar) fonts located in resources/laravolt/avatar/fonts
+- [x] AdminTableSeeder For Adding Roles and Permission [Silber/Bouncer](https://github.com/JosephSilber/bouncer)
+- [x] Facebook Apps Config /config/laravel-facebook-sdk.php [SammyK/LaravelFacebookSdk](https://github.com/SammyK/LaravelFacebookSdk)
 
 ** Facade Usable **
 - [x] Bouncer 
@@ -48,10 +48,15 @@
 ## Initial Set Up For Productions
 
 1.) Create FB Developers App
+
 2.) Create Google Recaptcha 
+
 3.) Create BrainTree / Stripe 
+
 4.) Create Cloudflare
+
 5.) Create Forge
+
 6.) Apply SSL
 
 ## Gulp Command Available ##
