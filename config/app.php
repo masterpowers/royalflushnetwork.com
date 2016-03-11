@@ -140,8 +140,7 @@ return [
         Illuminate\Mail\MailServiceProvider::class,
         Illuminate\Pagination\PaginationServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,
-        Illuminate\Queue\QueueServiceProvider::class,
-        // Illuminate\Redis\RedisServiceProvider::class,
+        Illuminate\Queue\QueueServiceProvider::class, 
         Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
@@ -152,7 +151,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Laravolt\Avatar\ServiceProvider::class,
         Silber\Bouncer\BouncerServiceProvider::class,
-        //Laravel\Cashier\CashierServiceProvider,
+        Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -161,6 +160,12 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /*
+         * OPTIONAL TO BE ACTIVATED
+         * Laravel\Cashier\CashierServiceProvider::class,
+         * Illuminate\Redis\RedisServiceProvider::class,
+         */
 
     ],
 
@@ -210,8 +215,10 @@ return [
         'PHPRedis'    => Illuminate\Support\Facades\Redis::class,
         'Facebook'    => SammyK\LaravelFacebookSdk\FacebookFacade::class,
         'Avatar'      => Laravolt\Avatar\Facade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
         'Bouncer'     => Silber\Bouncer\BouncerFacade::class,
         'Uuid'        => Webpatser\Uuid\Uuid::class,
+        'NestedSet'   => Kalnoy\Nestedset\NestedSet::class,
 
     ],
 

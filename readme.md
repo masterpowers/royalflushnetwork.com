@@ -13,6 +13,10 @@
 - [ ] Admin CRUD Categories , Products, Show Products and Filter by Category
 - [ ] Customer can Signup , Show Products, filter by category
 
+** Added **
+- [x] Links
+- [x] Reviews
+
 
 **Set Up **
 - [x] Compile PHPRedis
@@ -33,16 +37,20 @@
 - [ ] Option.Json Install the Array to Composer.json for (BrainTree/Stripe)
 
 ** Configureable **
+```php artisan vendor:publish```
 - [x] config/avatar.php [Laravolt/Avatar](https://github.com/laravolt/avatar) fonts located in resources/laravolt/avatar/fonts
 - [x] AdminTableSeeder For Adding Roles and Permission [Silber/Bouncer](https://github.com/JosephSilber/bouncer)
 - [x] Facebook Apps Config /config/laravel-facebook-sdk.php [SammyK/LaravelFacebookSdk](https://github.com/SammyK/LaravelFacebookSdk)
+- [x] Eloquent Sluggable Config /config/sluggable.php [Cviebrock/Eloquent-sluggable](https://github.com/cviebrock/eloquent-sluggable)
+- [x] Intervention Image Config /config/image.php [Intervention/image](https://github.com/Intervention/image)
 
 ** Facade Usable **
-- [x] Bouncer 
-- [x] Uuid 
-- [x] Facebook
-- [x] Avatar
-- [x] PHPRedis 
+- [x] Bouncer [Silber/Bouncer](https://github.com/JosephSilber/bouncer)
+- [x] Uuid [Webpatser/Laravel-Uuid](https://github.com/webpatser/laravel-uuid)
+- [x] Facebook [SammyK/LaravelFacebookSdk](https://github.com/SammyK/LaravelFacebookSdk)
+- [x] Avatar [Laravolt/Avatar](https://github.com/laravolt/avatar)
+- [x] PHPRedis [Vetruvet/Laravel-Phpredis](https://github.com/vetruvet/laravel-phpredis)
+- [x] NestedSet [lazychaser/Laravel-Nestedset](https://github.com/lazychaser/laravel-nestedset)
 
 
 ## Initial Set Up For Productions

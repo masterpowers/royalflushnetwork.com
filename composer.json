@@ -15,7 +15,9 @@
         "laravolt/avatar": "^1.2",
         "sammyk/laravel-facebook-sdk": "^3.0",
         "barryvdh/laravel-debugbar": "^2.1",
-        "webpatser/laravel-uuid": "2.*"
+        "webpatser/laravel-uuid": "2.*",
+        "kalnoy/nestedset": "^4.1",
+        "cviebrock/eloquent-sluggable": "^3.1"
 
     },
     "require-dev": {
