@@ -47,17 +47,17 @@
 
 ## Initial Set Up For Productions
 
-1.) Create FB Developers App
+1. Create FB Developers App
 
-2.) Create Google Recaptcha 
+2. Create Google Recaptcha 
 
-3.) Create BrainTree / Stripe 
+3. Create BrainTree / Stripe 
 
-4.) Create Cloudflare
+4. Create Cloudflare
 
-5.) Create Forge
+5. Create Forge
 
-6.) Apply SSL
+6. Apply SSL
 
 ## Gulp Command Available ##
 - [x] gulp
