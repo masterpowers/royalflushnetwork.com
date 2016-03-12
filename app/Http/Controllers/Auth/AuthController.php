@@ -29,6 +29,8 @@ class AuthController extends Controller
      * @var string
      */
     protected $redirectTo = '/';
+    protected $maxLoginAttempts = 10;
+    protected $lockoutTime = 300;
 
     /**
      * Create a new authentication controller instance.

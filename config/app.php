@@ -152,6 +152,7 @@ return [
         Laravolt\Avatar\ServiceProvider::class,
         Silber\Bouncer\BouncerServiceProvider::class,
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         /*
          * Application Service Providers...

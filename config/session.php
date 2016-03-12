@@ -148,5 +148,5 @@ return [
     |
     */
 
-    'secure' => env('SECURE_COOKIE', 'false'),
+    'secure' => env('SECURE_COOKIE', false),
 ];
