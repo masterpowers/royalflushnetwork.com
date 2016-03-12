@@ -1,22 +1,19 @@
 <?php
 
-Route::get('/', function () {
-    return redirect()->route('admin::activate');
-});
+// Route::get('message', function () {
+//     $app = PHPRedis::connection();
+// $app->set("masterpowers", "Yeah Baby Yeah");
+// print_r($app->get("masterpowers"));
+// });
 
-Route::get('message', function () {
-    $app = PHPRedis::connection();
-$app->set("masterpowers", "Yeah Baby Yeah");
-print_r($app->get("masterpowers"));
-});
-
-Route::group(['middleware' => ['web']], function () {
-    Route::group(['prefix' => 'admin/{account_id}', 'namespace' => 'Admin', 'as' => 'admin/{account_id}'], function () {
-        Route::get('activate', function ($accountId) {
-            return $accountId;
-        })->name('activate');
-    });
-});
+// Route::group(['middleware' => ['web']], function () {
+//     Route::group(['prefix' => '/admin/{account_id}', 'namespace' => 'Admin', 'as' => 'admin::', 'domain' => '{account}.royalflushnetwork.dev'], function () {
+       
+//         Route::any('{link}', function($link,$accountId,$account){
+//         	return $link . ' ' . $accountId . ' ' . $account;
+//         })->name('link')->where(array('account_id' => '[\d+]+', 'link' => '[[a-z0-9-]+', 'account' => '[[a-z0-9-]+'));
+//     });
+// });
 
 //Route::get('/profile', 'X@showProfile')->name('profile');
 // In View You Can do This // return redirect()->route('profile');
@@ -35,3 +32,13 @@ $name = $route->getName();
 
 $actionName = $route->getActionName();
 */
+
+Route::group(['middleware' => ['web']], function () {
+    Route::auth();
+
+    Route::get('/home', [
+    	'middleware' => 'roles',
+    	'roles' => ['Admin', 'NewYork' ,'Yankees'],
+    	'uses' => 'HomeController@index']
+    	);
+});

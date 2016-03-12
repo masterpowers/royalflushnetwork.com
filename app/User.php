@@ -5,11 +5,12 @@ namespace App;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use SammyK\LaravelFacebookSdk\SyncableGraphNodeTrait;
 use Silber\Bouncer\Database\HasRolesAndAbilities;
+
 // use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
-    /**
+    /*
      * The attributes that are mass assignable.
      *
      * @var array
@@ -27,27 +28,45 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token','fb_token', 'stripe_id', 'card_brand', 'card_last_four', 'resent'
+        'password', 'remember_token','fb_token', 'stripe_id', 'card_brand', 'card_last_four', 'resent',
     ];
 
     protected static $graph_node_field_aliases = [
         // from fb      => your database column
-        'id'            => 'fbid',
-        'name'          => 'name',
-        'email'         => 'email',
-        'verified'      => 'verified',
-        'access_token'  => 'fb_token'
-        
+        'id' => 'fbid',
+        'name' => 'name',
+        'email' => 'email',
+        'verified' => 'verified',
+        'access_token' => 'fb_token',
+
     ];
     protected static $graph_node_fillable_fields = [
         // database columns that will be filled
-    'fbid', 'name', 'email', 'verified', 'fb_token'
+    'fbid', 'name', 'email', 'verified', 'fb_token',
     ];
 
     protected $dates = ['created_at', 'updated_at'];
 
     protected $casts = [
         'verified' => 'boolean',
-        'blocked' => 'boolean'
+        'blocked' => 'boolean',
     ];
+
+
+    public function hasRole($roles)
+    {
+        if ($this->is('Admin')) {
+            return true;
+        }
+
+        if (is_array($roles)) {
+            foreach ($roles as $role) {
+                if ($this->isNot($role)) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
 }
