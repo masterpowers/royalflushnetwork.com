@@ -16,7 +16,7 @@ Route::group(['middleware' => ['web']], function () {
      Route::auth();
      Route::get('/home', [
     	'middleware' => 'roles',
-    	'roles' => ['Admin', 'NewYork' ,'Yankees'],
+    	'roles' => ['admin'],
     	'uses' => 'HomeController@index']
     	);
 });
