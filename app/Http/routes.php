@@ -7,15 +7,16 @@
 // });
 
 Route::group(['middleware' => ['web']], function () {
+	Route::auth();
     Route::group(['prefix' => '/admin/{account_id}', 'namespace' => 'Admin', 'as' => 'admin::', 'domain' => '{account}.royalflushnetwork.dev'], function () {
        
         Route::any('{link}', function($link,$accountId,$account){
         	return $link . ' ' . $accountId . ' ' . $account;
         })->name('link')->where(array('account_id' => '[\d+]+', 'link' => '[[a-z0-9-]+', 'account' => '[[a-z0-9-]+'));
     });
-     Route::auth();
+     
      Route::get('/home', [
-    	'middleware' => 'roles',
+    	'middleware' => ['auth','roles'],
     	'roles' => ['admin'],
     	'uses' => 'HomeController@index']
     	);
