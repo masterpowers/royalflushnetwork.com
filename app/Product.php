@@ -20,4 +20,14 @@ class Product extends Model implements SluggableInterface
         'options' => 'array',
         'dimensions' => 'array',
     ];
+
+    // protected $touches = ['card']; 
+    // public function card()
+    // {
+    //     return $this->belongsTo(Card::class);
+    // }
+    // in your view add this
+    // @cache($post, 'my-custom-key')
+    //<div>view here</div>
+	//@endcache
 }

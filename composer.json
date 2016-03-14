@@ -17,7 +17,8 @@
         "barryvdh/laravel-debugbar": "^2.1",
         "webpatser/laravel-uuid": "2.*",
         "kalnoy/nestedset": "^4.1",
-        "cviebrock/eloquent-sluggable": "^3.1"
+        "cviebrock/eloquent-sluggable": "^3.1",
+        "pda/pheanstalk": "~3.0"
 
     },
     "require-dev": {
