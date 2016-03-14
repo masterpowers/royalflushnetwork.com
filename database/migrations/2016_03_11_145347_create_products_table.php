@@ -23,9 +23,9 @@ class CreateProductsTable extends Migration
             $table->string('caption'); // Production Caption
             $table->text('description'); // Product Description
             $table->binary('featured_image'); // Single Upload
-            // $table->json('images'); // Admin MultipleUpload
-            // $table->json('attributes'); // Admin add Color/Size
-            // $table->json('dimensions'); // Admin Add LxWxH Wt. Ml
+            $table->text('images'); // Admin MultipleUpload
+            $table->text('options'); // Admin add Color/Size
+            $table->text('dimensions'); // Admin Add LxWxH Wt. Ml
             $table->float('rating_cache', 2, 1)->default(0); // User
             $table->integer('rating_count')->default(0); // User
             $table->softDeletes();

@@ -13,4 +13,10 @@ class Product extends Model implements SluggableInterface
         'build_from' => 'name',
         'save_to'    => 'slug',
     ];
+
+     protected $casts = [
+        'images' => 'array',
+        'options' => 'array',
+        'dimensions' => 'array',
+    ];
 }

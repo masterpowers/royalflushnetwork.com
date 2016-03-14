@@ -15,7 +15,7 @@ Route::group(['middleware' => ['web']], function () {
         })->name('link')->where(array('account_id' => '[\d+]+', 'link' => '[[a-z0-9-]+', 'account' => '[[a-z0-9-]+'));
     });
      
-     Route::get('/home', [
+     Route::get('/', [
     	'middleware' => ['auth','roles'],
     	'roles' => ['admin'],
     	'uses' => 'HomeController@index']
