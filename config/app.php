@@ -153,6 +153,7 @@ return [
         Silber\Bouncer\BouncerServiceProvider::class,
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        Laracasts\Matryoshka\MatryoshkaServiceProvider::class,
 
         /*
          * Application Service Providers...
